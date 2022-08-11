@@ -1,9 +1,9 @@
 -- Question 1
 
-select customer_id
+select first_name, last_name, district
 from customer
 join address
-on address.address_id = customer.customer_id
+on address.address_id = customer.address_id
 where district = 'Texas';
 
 
@@ -16,10 +16,9 @@ from customer
 join payment
 on customer.customer_id = payment.customer_id
 where amount > 6.99
-group by first_name, last_name, amount
-order by amount desc;
+;
 
---Answer = see query 992
+--Answer = see query 1406
 ------------------------------
 --Question 3
 
